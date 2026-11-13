@@ -61,6 +61,7 @@
       <h2>About Me</h2>
       <p>I am Wei Yi, a final-year Ph.D. candidate at Xidian University, advised by Prof. <a href="https://web.xidian.edu.cn/jcao/">Jin Cao</a>. In 2027, I will rejoin Dr. <a href="https://sites.google.com/view/chenyi1/home">Yi Chen</a>'s group at the University of Hong Kong (HKU) as a postdoctoral fellow, where I previously spent a year as a visiting student.</p>
       <p>My research focuses on <strong>cellular network security</strong>. Specifically, I explore new attack surfaces to reveal how attackers can abuse legitimate protocol behaviors defined in cellular standards. I also design practical defenses and work to incorporate them into 3GPP security standards.</p>
+      <p>I'm always excited to explore new ideas and collaborations. Feel free to <a data-u="yiwei6.to" data-d="gmail.com">drop me an email</a> if you'd like to chat!</p>
       <h3>Research Interests</h3>
       <ul class="interests">
         <li>Cellular Core Network Security</li>
@@ -176,8 +177,10 @@
 
   <script>
     (function () {
-      var a = document.getElementById('email');
-      if (a) a.href = 'mailto:' + a.getAttribute('data-u') + '@' + a.getAttribute('data-d');
+      var links = document.querySelectorAll('a[data-u][data-d]');
+      for (var i = 0; i < links.length; i++) {
+        links[i].href = 'mailto:' + links[i].getAttribute('data-u') + '@' + links[i].getAttribute('data-d');
+      }
     })();
   </script>
 </body>
